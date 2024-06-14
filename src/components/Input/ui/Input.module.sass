@@ -1,1 +1,41 @@
 .input
+  padding: 7px 35px 7px 39px
+  border-radius: var(--radius-md)
+  border: 1px solid #D0D5DD
+  font-size: 16px
+  line-height: 24px
+  font-family: "Inter", sans-serif
+  color: #101828
+  font-weight: 400
+  box-shadow: 0px 1px 2px 0px #1018280D
+  transition: box-shadow 0.05s ease-in
+  &::placeholder
+    color: #667085
+  &:focus
+    outline: none
+    border: 1px solid #D6BBFB
+    box-shadow: 0px 1px 2px 0px #1018280D, 0px 0px 0px 4px #9E77ED3D
+
+.haveIcon
+  padding: 7px 35px 7px 11px
+  
+.input[aria-disabled="true"]
+  background-color: #F9FAFB
+
+.info
+  position: absolute
+  top: 12px
+  right: 13px
+  fill: #98A2B3
+  transition: fill 0.2s linear
+  &:hover
+    fill: #6b727e
+
+.inputContainer
+  position: relative
+
+.icon
+  fill: #667085
+  position: absolute
+  top: 12px
+  left: 13px
