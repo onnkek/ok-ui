@@ -1,0 +1,40 @@
+.checkbox
+  border: 1px solid #D0D5DD
+  border-radius: var(--radius-xs)
+  display: flex
+  justify-self: start
+  align-items: center
+  svg
+    fill: white
+  &:active
+    box-shadow: 0px 0px 0px 4px #98A2B324
+.m
+  width: 16px
+  height: 16px
+  svg
+    width: 16px
+    height: 16px
+.l
+  width: 20px
+  height: 20px
+  svg
+    width: 20px
+    height: 20px
+
+.checkbox[aria-checked="true"]
+  background-color: #7F56D9
+  border: none
+  &:active
+    box-shadow: 0px 0px 0px 4px #9E77ED3D
+
+.checkbox[aria-disabled="true"].checkbox[aria-checked="true"]
+  background-color: white
+  border: 1px solid #D0D5DD
+  svg
+    fill: #D0D5DD
+  &:active
+    box-shadow: none
+
+.checkbox[aria-disabled="false"].checkbox[aria-checked="true"]
+  background-color: #7F56D9
+  border: none

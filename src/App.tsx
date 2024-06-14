@@ -1,26 +1,14 @@
 import './App.sass';
 import { Button } from 'components/Button';
-import { ReactComponent  as DownloadIcon } from 'assets/icons/download.svg';
+import { ReactComponent as DownloadIcon } from 'assets/icons/download.svg';
+import { Checkbox } from 'components/Checkbox';
 
 function App() {
   return (
     <div className='wrapper'>
       <div>
-      <Button size='XS'><DownloadIcon />Label</Button>
-      <Button size='S' ><DownloadIcon />Label</Button>
-      <Button          ><DownloadIcon />Label</Button>
-      <Button size='L' ><DownloadIcon />Label</Button>
-      <Button size='XL'><DownloadIcon />Label</Button>
-      <Button size='XL' theme='outline'><DownloadIcon />Label</Button>
-      <Button size='XL' theme='color-outline'><DownloadIcon />Label</Button>
-      <Button size='XL' theme='clear'><DownloadIcon />Label</Button>
-      <Button size='XL' theme='color-clear'><DownloadIcon />Label</Button>
+        <Checkbox size='L'/>
 
-        <Button disabled>Label</Button>
-        <Button >
-          <DownloadIcon />
-          Label
-        </Button>
       </div>
     </div>
   );
