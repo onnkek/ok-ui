@@ -1,0 +1,66 @@
+.toggleContainer
+  display: flex
+  align-items: center
+  width: 36px
+  height: 20px
+  background-color: #F2F4F7
+  outline: none
+  border: none
+  border-radius: 20px
+  cursor: pointer
+.toggle
+  display: block
+  width: 16px
+  height: 16px
+  border-radius: var(--radius-full)
+  background-color: #fff
+  transition: transform 0.2s ease-in-out
+  box-shadow: 0px 1px 2px 0px #1018280F, 0px 1px 3px 0px #1018281A
+
+.disabled
+  cursor: default
+  .toggle
+    color: #F9FAFB
+
+.toggleContainer[aria-checked="true"].disabled
+  background-color: #F2F4F7
+
+.toggleContainer[aria-checked="true"]
+  animation: color 0.2s ease-in-out
+  background-color: #7F56D9
+  .toggle
+    transform: translateX(12px)
+  &:focus-visible
+    box-shadow: 0px 0px 0px 4px #9E77ED3D
+
+.toggleContainer[aria-checked="false"]
+  animation: colorBack 0.2s ease-in-out
+  background-color: #F2F4F7
+  .toggle
+    transform: translateX(-3.5px)
+  &:focus-visible
+    box-shadow: 0px 0px 0px 4px #98A2B333
+
+@keyframes color
+  from
+    background-color: #F2F4F7
+  to
+    background-color: #7F56D9
+
+@keyframes colorBack
+  from
+    background-color: #7F56D9
+  to
+    background-color: #F2F4F7
+
+.toggleContainer.l
+  width: 44px
+  height: 24px
+
+  .toggle
+    width: 20px
+    height: 20px
+
+.toggleContainer[aria-checked="true"].l
+  .toggle
+    transform: translateX(16px)

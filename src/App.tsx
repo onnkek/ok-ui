@@ -6,6 +6,7 @@ import { Input } from 'components/Input';
 import { Dropdown } from 'components/Dropdown';
 import { Avatar } from 'components/Avatar';
 import { Badge } from 'components/Badge';
+import { Toggle } from 'components/Toggle';
 
 function App() {
   return (
@@ -147,7 +148,7 @@ function App() {
             <Badge color='orange' dot size='L' theme='modern'>Label</Badge>
           </div>
         </div>
-
+        <Toggle /><Toggle /><Toggle /><Toggle disabled /><Toggle disabled checked /><Toggle size='L' />
 
       </div>
     </div>
