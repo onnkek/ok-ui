@@ -5,6 +5,7 @@ import { Checkbox } from 'components/Checkbox';
 import { Input } from 'components/Input';
 import { Dropdown } from 'components/Dropdown';
 import { Avatar } from 'components/Avatar';
+import { Badge } from 'components/Badge';
 
 function App() {
   return (
@@ -69,6 +70,85 @@ function App() {
           size='XL'
           src='https://avatars.dzeninfra.ru/get-zen_doc/1863639/pub_5e9448a5539dae4595bd8de7_5e983d88a9c5474bc701b44e/scale_1200'
         />
+        <div style={{ display: 'flex', borderBottom: '1px solid gray', padding: '10px' }}>
+          <div>
+            <Badge color='gray' dot size='L' theme='primary'>Label</Badge>
+            <Badge color='gray' dot size='L' theme='outline'>Label</Badge>
+            <Badge color='gray' dot size='L' theme='rect'>Label</Badge>
+            <Badge color='gray' dot size='L' theme='modern'>Label</Badge>
+          </div>
+          <div>
+            <Badge color='brand' dot size='L' theme='primary'>Label</Badge>
+            <Badge color='brand' dot size='L' theme='outline'>Label</Badge>
+            <Badge color='brand' dot size='L' theme='rect'>Label</Badge>
+            <Badge color='brand' dot size='L' theme='modern'>Label</Badge>
+          </div>
+          <div>
+            <Badge color='error' dot size='L' theme='primary'>Label</Badge>
+            <Badge color='error' dot size='L' theme='outline'>Label</Badge>
+            <Badge color='error' dot size='L' theme='rect'>Label</Badge>
+            <Badge color='error' dot size='L' theme='modern'>Label</Badge>
+          </div>
+          <div>
+            <Badge color='warning' dot size='L' theme='primary'>Label</Badge>
+            <Badge color='warning' dot size='L' theme='outline'>Label</Badge>
+            <Badge color='warning' dot size='L' theme='rect'>Label</Badge>
+            <Badge color='warning' dot size='L' theme='modern'>Label</Badge>
+          </div>
+          <div>
+            <Badge color='success' dot size='L' theme='primary'>Label</Badge>
+            <Badge color='success' dot size='L' theme='outline'>Label</Badge>
+            <Badge color='success' dot size='L' theme='rect'>Label</Badge>
+            <Badge color='success' dot size='L' theme='modern'>Label</Badge>
+          </div>
+          <div>
+            <Badge color='gray-blue' dot size='L' theme='primary'>Label</Badge>
+            <Badge color='gray-blue' dot size='L' theme='outline'>Label</Badge>
+            <Badge color='gray-blue' dot size='L' theme='rect'>Label</Badge>
+            <Badge color='gray-blue' dot size='L' theme='modern'>Label</Badge>
+          </div>
+        </div>
+        <div style={{ display: 'flex', borderBottom: '1px solid gray', padding: '10px' }}>
+
+          <div>
+            <Badge color='blue-light' dot size='L' theme='primary'>Label</Badge>
+            <Badge color='blue-light' dot size='L' theme='outline'>Label</Badge>
+            <Badge color='blue-light' dot size='L' theme='rect'>Label</Badge>
+            <Badge color='blue-light' dot size='L' theme='modern'>Label</Badge>
+          </div>
+          <div>
+            <Badge color='blue' dot size='L' theme='primary'>Label</Badge>
+            <Badge color='blue' dot size='L' theme='outline'>Label</Badge>
+            <Badge color='blue' dot size='L' theme='rect'>Label</Badge>
+            <Badge color='blue' dot size='L' theme='modern'>Label</Badge>
+          </div>
+          <div>
+            <Badge color='indigo' dot size='L' theme='primary'>Label</Badge>
+            <Badge color='indigo' dot size='L' theme='outline'>Label</Badge>
+            <Badge color='indigo' dot size='L' theme='rect'>Label</Badge>
+            <Badge color='indigo' dot size='L' theme='modern'>Label</Badge>
+          </div>
+          <div>
+            <Badge color='purple' dot size='L' theme='primary'>Label</Badge>
+            <Badge color='purple' dot size='L' theme='outline'>Label</Badge>
+            <Badge color='purple' dot size='L' theme='rect'>Label</Badge>
+            <Badge color='purple' dot size='L' theme='modern'>Label</Badge>
+          </div>
+          <div>
+            <Badge color='pink' dot size='L' theme='primary'>Label</Badge>
+            <Badge color='pink' dot size='L' theme='outline'>Label</Badge>
+            <Badge color='pink' dot size='L' theme='rect'>Label</Badge>
+            <Badge color='pink' dot size='L' theme='modern'>Label</Badge>
+          </div>
+          <div>
+            <Badge color='orange' dot size='L' theme='primary'>Label</Badge>
+            <Badge color='orange' dot size='L' theme='outline'>Label</Badge>
+            <Badge color='orange' dot size='L' theme='rect'>Label</Badge>
+            <Badge color='orange' dot size='L' theme='modern'>Label</Badge>
+          </div>
+        </div>
+
+
       </div>
     </div>
   );
