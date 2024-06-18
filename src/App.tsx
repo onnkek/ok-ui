@@ -7,6 +7,10 @@ import { Dropdown } from 'components/Dropdown';
 import { Avatar } from 'components/Avatar';
 import { Badge } from 'components/Badge';
 import { Toggle } from 'components/Toggle';
+import { Tooltip } from 'components/Tooltip';
+import { Tooltip as RTooltip } from 'react-tooltip';
+import { Progress } from 'components/Progress';
+import { ProgressCircle } from 'components/ProgressCircle';
 
 function App() {
   return (
@@ -148,7 +152,18 @@ function App() {
             <Badge color='orange' dot size='L' theme='modern'>Label</Badge>
           </div>
         </div>
-        <Toggle /><Toggle /><Toggle /><Toggle disabled /><Toggle disabled checked /><Toggle size='L' />
+        <Toggle /><Toggle /><Toggle /><Toggle disabled /><Toggle disabled checked /><Toggle size='L' className='my-anchor-element' />
+        <Tooltip />
+        <RTooltip anchorSelect=".my-anchor-element">
+          100%
+        </RTooltip>
+        <div style={{ width: '200px', marginTop: '50px' }}>
+          <Progress value='70' text='tooltip-bottom' />
+        </div>
+        <div style={{ width: '700px', marginTop: '100px', display: 'flex', justifyContent: 'space-between' }}>
+          <ProgressCircle value='50' size='XL' title='Active users' />
+          <ProgressCircle value='100' size='XL' title='Active users' half />
+        </div>
 
       </div>
     </div>

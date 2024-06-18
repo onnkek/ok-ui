@@ -1,0 +1,108 @@
+.wrapper.half
+  width: calc(var(--progress-radius) * 2 + var(--stroke-width))
+  height: calc(var(--progress-radius) + var(--stroke-width))
+  justify-content: end
+.wrapper
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  width: calc(var(--progress-radius )* 2 + var(--stroke-width))
+  height: calc(var(--progress-radius )* 2 + var(--stroke-width))
+  .progressContainer,
+  .progress
+    stroke-width: var(--stroke-width)
+  .text
+    font-weight: 600
+    color: #101828
+
+.title
+  margin-bottom: 1px
+  color: #475467
+  font-weight: 500
+
+.wrapper.xxs
+  --progress-radius: 32px
+  --stroke-width: 6px
+  .text
+    font-size: 14px
+    line-height: 20px
+  .title
+    position: absolute
+    bottom: -20px
+    font-size: 12px
+    line-height: 18px
+
+.wrapper.m
+  --progress-radius: 80px
+  --stroke-width: 16px
+  .text
+    font-size: 24px
+    line-height: 32px
+  .title
+    font-size: 12px
+    line-height: 18px
+.wrapper.l
+  --progress-radius: 100px
+  --stroke-width: 20px
+  .text
+    font-size: 30px
+    line-height: 38px
+  .title
+    font-size: 12px
+    line-height: 18px
+
+.wrapper.xl
+  --progress-radius: 120px
+  --stroke-width: 24px
+  .text
+    font-size: 36px
+    line-height: 44px
+  .title
+    font-size: 14px
+    line-height: 20px
+
+.wrapper.xxl
+  --progress-radius: 140px
+  --stroke-width: 28px
+  .text
+    font-size: 48px
+    line-height: 60px
+  .title
+    font-size: 14px
+    line-height: 20px
+
+.svg
+  position: absolute
+  width: inherit
+  height: inherit
+
+.progressContainer
+  fill: transparent
+  cx: 50%
+  cy: 50%
+  r: var(--progress-radius)
+  stroke: #EAECF0
+
+.progress
+  fill: transparent
+  --progress-length: calc(2 * 3.1415926535 * var(--progress-radius))
+  cx: 50%
+  cy: 50%
+  r: var(--progress-radius)
+  stroke: #7F56D9
+  transform-origin: center
+  transform: rotate(-90deg)
+  stroke-dasharray: var(--progress-length)
+  stroke-linecap: round
+
+.half
+  .progressContainer
+    stroke-dasharray: calc(3.1415926535 * var(--progress-radius))
+    stroke-linecap: round
+    transform-origin: center
+    transform: rotate(-180deg) translateY(-41.5%)
+    height: 57%
+  .progress
+    transform: rotate(180deg) translateY(-41.5%)
