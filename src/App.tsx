@@ -1,7 +1,6 @@
 import './App.sass';
 import { Button } from 'components/Button';
 import { ReactComponent as DownloadIcon } from 'assets/icons/download.svg';
-import { Checkbox } from 'components/Checkbox';
 import { Input } from 'components/Input';
 import { Dropdown } from 'components/Dropdown';
 import { Avatar } from 'components/Avatar';
@@ -11,11 +10,33 @@ import { Tooltip } from 'components/Tooltip';
 import { Tooltip as RTooltip } from 'react-tooltip';
 import { Progress } from 'components/Progress';
 import { ProgressCircle } from 'components/ProgressCircle';
+import { Slider } from 'components/Slider';
 
 function App() {
   return (
     <div className='wrapper'>
       <div>
+        <div>
+          <Slider
+            text='tooltip-top'
+            label="Opacity"
+            formatOptions={{ style: 'percent' }}
+            maxValue={500}
+            type='range'
+            defaultValue={[100, 350]}
+            step={1}
+          />
+          <div style={{ height: '20px' }}></div>
+          <Slider
+            text='bottom'
+            label="Opacity"
+            formatOptions={{ style: 'percent' }}
+            maxValue={500}
+            type='single'
+            defaultValue={100}
+            step={1}
+          />
+        </div>
         <Input Icon={DownloadIcon} />
         <Dropdown button={<Button theme='outline'>Open</Button>} items={[
           [{

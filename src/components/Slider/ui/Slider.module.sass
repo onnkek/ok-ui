@@ -1,0 +1,72 @@
+.sliderWrapper
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 300px
+  touch-action: none
+
+.slider
+  position: relative
+  height: 30px
+  width: 100%
+
+.line
+  position: absolute
+  background-color: #EAECF0
+  height: 8px
+  top: 13px
+  width: 100%
+  border-radius: 9999px
+
+.thumbContainer
+  display: flex
+  flex-direction: column
+  align-items: center
+  position: absolute
+  top: 4px
+  transform: translateX(-50%)
+
+.thumb
+  width: 24px
+  height: 24px
+  border: 2px solid #7F56D9
+  background-color: #fff
+  border-radius: 9999px
+  box-shadow: 0px 2px 4px -2px #1018280F, 0px 4px 8px -2px #1018281A
+
+.progress
+  top: 13px
+  position: absolute
+  left: 0
+  width: 100px
+  height: 8px
+  border-radius: 9999px
+  background-color: #7F56D9
+
+.outputContainer
+  height: 32px
+.outputContainerTooltipTop
+  height: 38px
+.output.none
+  display: none
+.output.bottom
+  position: absolute
+  top: 32px
+  font-size: 16px
+  line-height: 24px
+  font-weight: 500
+  color: #101828
+
+.output.tooltipTop
+  position: absolute
+  padding: 8px 12px
+  top: -41px
+  background-color: #fff
+  border: 1px solid #EAECF0
+  border-radius: var(--radius-md)
+  box-shadow: 0px 4px 6px -2px #10182808, 0px 12px 16px -4px #10182814
+  font-size: 12px
+  line-height: 18px
+  font-weight: 600
+  color: #344054
