@@ -13,12 +13,31 @@ import { Progress } from 'components/Progress';
 import { ProgressCircle } from 'components/ProgressCircle';
 import { Slider } from 'components/Slider';
 import { Tag } from 'components/Tag';
+import { ButtonGroup } from 'components/ButtonGroup';
+import { InputText } from 'components/InputText';
+import { InputGroup } from 'components/InputGroup';
 
 function App() {
   return (
     <div className='wrapper'>
+
       <div style={{ marginLeft: '100px' }}>
-        <div>
+        <ButtonGroup>
+          <Button theme='outline'>Label</Button>
+          <Button theme='outline'>Label</Button>
+          <Button theme='outline'>Label</Button>
+        </ButtonGroup>
+        <div style={{ margin: '20px' }} />
+        <ButtonGroup>
+          <Button theme='color-outline'>1</Button>
+          <Button theme='color-outline'>2</Button>
+          <Button theme='color-outline'>3</Button>
+          <Button theme='color-outline'>4</Button>
+          <Button theme='color-outline'>5</Button>
+          <Button theme='color-outline'>6</Button>
+        </ButtonGroup>
+
+        <div style={{ marginTop: '20px' }}>
           <Slider
             text='tooltip-top'
             label="Opacity"
@@ -78,19 +97,19 @@ function App() {
         <div style={{ display: 'flex', marginBottom: '40px' }}>
           <div style={{ marginRight: '50px' }}>
             <div style={{ width: '350px', display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
-              <Tag checkbox>Label</Tag>
+              <Tag checkbox checked>Label</Tag>
               <Tag checkbox size='M'>Label</Tag>
               <Tag checkbox size='L'>Label</Tag>
             </div>
             <div style={{ width: '350px', display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
               <Tag checkbox onRemove={() => { }}>Label</Tag>
-              <Tag checkbox size='M' onRemove={() => { }}>Label</Tag>
+              <Tag checkbox checked size='M' onRemove={() => { }}>Label</Tag>
               <Tag checkbox size='L' onRemove={() => { }}>Label</Tag>
             </div>
             <div style={{ width: '350px', display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
               <Tag checkbox counter='5'>Label</Tag>
               <Tag checkbox size='M' counter='5'>Label</Tag>
-              <Tag checkbox size='L' counter='5'>Label</Tag>
+              <Tag checkbox checked size='L' counter='5'>Label</Tag>
             </div>
           </div>
           <div>
@@ -151,6 +170,33 @@ function App() {
         </div>
 
         <Input Icon={DownloadIcon} />
+        <div>
+          <InputGroup label='Website' descr='This is a hint text to help user.' error='This is an error message.'>
+            <InputText>https://</InputText>
+            <Input Icon={DownloadIcon} descr='This is a hint text to help user.' error='This is an error message.' />
+          </InputGroup>
+        </div>
+        <div>
+          <InputGroup label='Website' descr='This is a hint text to help user.' error='This is an error message.'>
+            <Input Icon={DownloadIcon} descr='This is a hint text to help user.' error='This is an error message.' />
+            <Button theme='outline'>
+              <DownloadIcon />
+              Copy
+            </Button>
+          </InputGroup>
+        </div>
+        <div>
+          <InputGroup label='Website' descr='This is a hint text to help user.' error='This is an error message.'>
+            <InputText>https://</InputText>
+            <Input Icon={DownloadIcon} descr='This is a hint text to help user.' error='This is an error message.' />
+            <Button theme='outline'>
+              <DownloadIcon />
+              Copy
+            </Button>
+          </InputGroup>
+        </div>
+
+
         <Dropdown button={<Button theme='outline'>Open</Button>} items={[
           [{
             content: 'View profile',

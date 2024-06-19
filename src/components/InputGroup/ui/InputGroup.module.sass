@@ -1,0 +1,48 @@
+.inputGroup
+  display: inline-flex
+  flex-direction: column
+
+.input
+  display: flex
+  *,
+  * input
+    --bs-border-width: 1px
+    margin-left: calc(var(--bs-border-width)* -1)
+  *:first-child,
+  *:first-child input
+    border-top-right-radius: 0
+    border-bottom-right-radius: 0
+  *:last-child,
+  *:last-child input
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+  // *:not(:last-child):not(:first-child),
+  *:not(:last-child):not(:first-child) input
+    border-radius: 0
+
+  button
+    height: 40px
+
+.label
+  margin-bottom: 6px
+  font-size: 14px
+  line-height: 20px
+  font-weight: 500
+  color: #344054
+.descr,
+.error
+  margin-top: 6px
+  font-size: 14px
+  line-height: 20px
+  font-weight: 400
+  color: #475467
+
+.error
+  color: #D92D20
+
+.parentError
+  input
+    border-color: #FDA29B
+    &:focus
+      border-color: #FDA29B
+      box-shadow: 0px 1px 2px 0px #1018280D, 0px 0px 0px 4px #F044383D

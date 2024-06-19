@@ -20,6 +20,7 @@ export interface TagProps {
   Icon?: React.VFC<React.SVGProps<SVGSVGElement>>;
   dot?: boolean;
   size?: TagSize;
+  checked?: boolean;
 }
 
 export const Tag = ({
@@ -30,7 +31,8 @@ export const Tag = ({
   counter,
   checkbox,
   Icon,
-  dot
+  dot,
+  checked
 }: TagProps) => {
   const mods: Mods = {
     [sizeClasses[size]]: size,
@@ -42,7 +44,7 @@ export const Tag = ({
   }
   return (
     <div className={classNames(cls.tag, mods, [className])}>
-      {checkbox && <Checkbox className={cls.checkbox} size={size} />}
+      {checkbox && <Checkbox checked={checked} className={cls.checkbox} size={size} />}
       {dot && <div className={cls.dot} />}
       {Icon && <Icon className={cls.icon} />}
       {children}
