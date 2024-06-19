@@ -1,6 +1,7 @@
 import './App.sass';
 import { Button } from 'components/Button';
 import { ReactComponent as DownloadIcon } from 'assets/icons/download.svg';
+import { ReactComponent as USIcon } from 'assets/icons/US.svg';
 import { Input } from 'components/Input';
 import { Dropdown } from 'components/Dropdown';
 import { Avatar } from 'components/Avatar';
@@ -11,11 +12,12 @@ import { Tooltip as RTooltip } from 'react-tooltip';
 import { Progress } from 'components/Progress';
 import { ProgressCircle } from 'components/ProgressCircle';
 import { Slider } from 'components/Slider';
+import { Tag } from 'components/Tag';
 
 function App() {
   return (
     <div className='wrapper'>
-      <div>
+      <div style={{ marginLeft: '100px' }}>
         <div>
           <Slider
             text='tooltip-top'
@@ -37,6 +39,117 @@ function App() {
             step={1}
           />
         </div>
+        <div style={{ display: 'flex' }}>
+          <div style={{ marginRight: '50px' }}>
+            <div style={{ width: '350px', display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
+              <Tag>Label</Tag>
+              <Tag size='M'>Label</Tag>
+              <Tag size='L'>Label</Tag>
+            </div>
+            <div style={{ width: '350px', display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
+              <Tag onRemove={() => { }}>Label</Tag>
+              <Tag size='M' onRemove={() => { }}>Label</Tag>
+              <Tag size='L' onRemove={() => { }}>Label</Tag>
+            </div>
+            <div style={{ width: '350px', display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
+              <Tag counter='5'>Label</Tag>
+              <Tag size='M' counter='5'>Label</Tag>
+              <Tag size='L' counter='5'>Label</Tag>
+            </div>
+          </div>
+          <div>
+            <div style={{ width: '350px', display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
+              <Tag Icon={USIcon}>Label</Tag>
+              <Tag Icon={USIcon} size='M'>Label</Tag>
+              <Tag Icon={USIcon} size='L'>Label</Tag>
+            </div>
+            <div style={{ width: '350px', display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
+              <Tag Icon={USIcon} onRemove={() => { }}>Label</Tag>
+              <Tag Icon={USIcon} size='M' onRemove={() => { }}>Label</Tag>
+              <Tag Icon={USIcon} size='L' onRemove={() => { }}>Label</Tag>
+            </div>
+            <div style={{ width: '350px', display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
+              <Tag Icon={USIcon} counter='5'>Label</Tag>
+              <Tag Icon={USIcon} size='M' counter='5'>Label</Tag>
+              <Tag Icon={USIcon} size='L' counter='5'>Label</Tag>
+            </div>
+          </div>
+        </div>
+        <div style={{ display: 'flex', marginBottom: '40px' }}>
+          <div style={{ marginRight: '50px' }}>
+            <div style={{ width: '350px', display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
+              <Tag checkbox>Label</Tag>
+              <Tag checkbox size='M'>Label</Tag>
+              <Tag checkbox size='L'>Label</Tag>
+            </div>
+            <div style={{ width: '350px', display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
+              <Tag checkbox onRemove={() => { }}>Label</Tag>
+              <Tag checkbox size='M' onRemove={() => { }}>Label</Tag>
+              <Tag checkbox size='L' onRemove={() => { }}>Label</Tag>
+            </div>
+            <div style={{ width: '350px', display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
+              <Tag checkbox counter='5'>Label</Tag>
+              <Tag checkbox size='M' counter='5'>Label</Tag>
+              <Tag checkbox size='L' counter='5'>Label</Tag>
+            </div>
+          </div>
+          <div>
+            <div style={{ width: '350px', display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
+              <Tag checkbox Icon={USIcon}>Label</Tag>
+              <Tag checkbox Icon={USIcon} size='M'>Label</Tag>
+              <Tag checkbox Icon={USIcon} size='L'>Label</Tag>
+            </div>
+            <div style={{ width: '350px', display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
+              <Tag checkbox Icon={USIcon} onRemove={() => { }}>Label</Tag>
+              <Tag checkbox Icon={USIcon} size='M' onRemove={() => { }}>Label</Tag>
+              <Tag checkbox Icon={USIcon} size='L' onRemove={() => { }}>Label</Tag>
+            </div>
+            <div style={{ width: '350px', display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
+              <Tag checkbox Icon={USIcon} counter='5'>Label</Tag>
+              <Tag checkbox Icon={USIcon} size='M' counter='5'>Label</Tag>
+              <Tag checkbox Icon={USIcon} size='L' counter='5'>Label</Tag>
+            </div>
+          </div>
+        </div>
+        <div style={{ display: 'flex' }}>
+          <div style={{ marginRight: '50px' }}>
+            <div style={{ width: '350px', display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
+              <Tag dot>Label</Tag>
+              <Tag dot size='M'>Label</Tag>
+              <Tag dot size='L'>Label</Tag>
+            </div>
+            <div style={{ width: '350px', display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
+              <Tag dot onRemove={() => { }}>Label</Tag>
+              <Tag dot size='M' onRemove={() => { }}>Label</Tag>
+              <Tag dot size='L' onRemove={() => { }}>Label</Tag>
+            </div>
+            <div style={{ width: '350px', display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
+              <Tag dot counter='5'>Label</Tag>
+              <Tag dot size='M' counter='5'>Label</Tag>
+              <Tag dot size='L' counter='5'>Label</Tag>
+            </div>
+          </div>
+        </div>
+        <div style={{ display: 'flex' }}>
+          <div style={{ marginRight: '50px' }}>
+            <div style={{ width: '350px', display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
+              <Tag checkbox dot>Label</Tag>
+              <Tag checkbox dot size='M'>Label</Tag>
+              <Tag checkbox dot size='L'>Label</Tag>
+            </div>
+            <div style={{ width: '350px', display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
+              <Tag checkbox dot onRemove={() => { }}>Label</Tag>
+              <Tag checkbox dot size='M' onRemove={() => { }}>Label</Tag>
+              <Tag checkbox dot size='L' onRemove={() => { }}>Label</Tag>
+            </div>
+            <div style={{ width: '350px', display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
+              <Tag checkbox dot counter='5'>Label</Tag>
+              <Tag checkbox dot size='M' counter='5'>Label</Tag>
+              <Tag checkbox dot size='L' counter='5'>Label</Tag>
+            </div>
+          </div>
+        </div>
+
         <Input Icon={DownloadIcon} />
         <Dropdown button={<Button theme='outline'>Open</Button>} items={[
           [{
