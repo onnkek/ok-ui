@@ -2,6 +2,8 @@ import './App.sass';
 import { Button } from 'components/Button';
 import { ReactComponent as DownloadIcon } from 'assets/icons/download.svg';
 import { ReactComponent as USIcon } from 'assets/icons/US.svg';
+import { ReactComponent as FeaturesIcon } from 'assets/icons/features.svg';
+import { ReactComponent as Grid } from 'assets/icons/bg-squares-l.svg';
 import { Input } from 'components/Input';
 import { Dropdown } from 'components/Dropdown';
 import { Avatar } from 'components/Avatar';
@@ -17,11 +19,34 @@ import { ButtonGroup } from 'components/ButtonGroup';
 import { InputText } from 'components/InputText';
 import { InputGroup } from 'components/InputGroup';
 import { InputCode } from 'components/InputCode';
+import { Modal } from 'components/Modal';
+import { useState } from 'react';
 
 function App() {
+  const [open, setOpen] = useState(false);
+
+  const openModal = () => {
+    setOpen(true);
+  }
+  const closeModal = () => {
+    setOpen(false);
+  }
+
   return (
     <div className='wrapper'>
 
+
+      <Button onClick={openModal}>Open modal</Button>
+      <Modal isOpen={open} onClose={closeModal} Icon={FeaturesIcon}>
+        <div style={{ fontSize: '18px', lineHeight: '28px', fontWeight: '600', color: '#101828', marginBottom: '4px' }}>Blog post published</div>
+        <div style={{ fontSize: '14px', lineHeight: '20px', fontWeight: '400', color: '#475467' }}>
+          This blog post has been published. Team members will be able to edit this post and republish changes.
+        </div>
+        <div style={{ display: 'flex', marginTop: '32px', justifyContent: 'space-between' }}>
+          <Button width='170px' size='L' theme='outline'>Cancel</Button>
+          <Button width='170px' size='L'>Confirm</Button>
+        </div>
+      </Modal>
       <div style={{ marginLeft: '100px' }}>
         <ButtonGroup>
           <Button theme='outline'>Label</Button>

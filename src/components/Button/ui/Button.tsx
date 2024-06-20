@@ -25,6 +25,8 @@ export interface ButtonProps {
   disabled?: boolean;
   size?: ButtonSize;
   theme?: ButtonTheme;
+  onClick?: () => void;
+  width?: string;
 }
 
 export const Button = ({
@@ -32,7 +34,9 @@ export const Button = ({
   children,
   disabled = false,
   size = 'M',
-  theme = 'primary'
+  theme = 'primary',
+  width,
+  ...otherProps
 }: ButtonProps) => {
 
   const mods: Mods = {
@@ -41,7 +45,7 @@ export const Button = ({
     [themeClasses[theme]]: true
   }
   return (
-    <HButton disabled={disabled} className={classNames(cls.button, mods, [className])}>
+    <HButton style={{ width: width }} {...otherProps} disabled={disabled} className={classNames(cls.button, mods, [className])}>
       {children}
     </HButton>
   );
