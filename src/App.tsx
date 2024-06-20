@@ -16,6 +16,7 @@ import { Tag } from 'components/Tag';
 import { ButtonGroup } from 'components/ButtonGroup';
 import { InputText } from 'components/InputText';
 import { InputGroup } from 'components/InputGroup';
+import { InputCode } from 'components/InputCode';
 
 function App() {
   return (
@@ -168,17 +169,81 @@ function App() {
             </div>
           </div>
         </div>
-
-        <Input Icon={DownloadIcon} />
+        <div style={{ display: 'block' }}>
+          <InputGroup group={false} label='Secure code' descr='This is a hint text to help user.' >
+            <InputCode />
+          </InputGroup>
+        </div>
+        <div style={{ display: 'block' }}>
+          <InputGroup group={false} label='Secure code' descr='This is a hint text to help user.' >
+            <InputCode size='M' />
+          </InputGroup>
+        </div>
+        <div style={{ display: 'block' }}>
+          <InputGroup group={false} label='Secure code' descr='This is a hint text to help user.' >
+            <InputCode size='L' />
+          </InputGroup>
+        </div>
+        <div style={{ display: 'block' }}>
+          <InputGroup group={false} label='Secure code' descr='This is a hint text to help user.' >
+            <InputCode type='3+3' />
+          </InputGroup>
+        </div>
+        <div style={{ display: 'block' }}>
+          <InputGroup group={false} label='Secure code' descr='This is a hint text to help user.' >
+            <InputCode size='M' type='3+3' />
+          </InputGroup>
+        </div>
+        <div style={{ display: 'block' }}>
+          <InputGroup group={false} label='Secure code' descr='This is a hint text to help user.' >
+            <InputCode size='L' type='3+3' />
+          </InputGroup>
+        </div>
+        <div style={{ display: 'block' }}>
+          <InputGroup label='Website' descr='This is a hint text to help user.' error='This is an error message.'>
+            <Input area descr='This is a hint text to help user.' error='This is an error message.' placeholder='Enter a description...' />
+          </InputGroup>
+        </div>
+        <div>
+          <Input placeholder='Enter a description...' />
+        </div>
+        <div>
+          <Input area placeholder='Enter a description...' />
+        </div>
+        <div>
+          <Input disabled area placeholder='Enter a description...' />
+        </div>
+        <div>
+          <InputGroup label='Website' descr='This is a hint text to help user.'>
+            <Input descr='This is a hint text to help user.' placeholder='Enter a description...' />
+          </InputGroup>
+        </div>
+        <div>
+          <Input Icon={DownloadIcon} placeholder='olivia@unitedui.com' />
+        </div>
+        <div>
+          <Input disabled Icon={DownloadIcon} placeholder='olivia@unitedui.com' />
+        </div>
         <div>
           <InputGroup label='Website' descr='This is a hint text to help user.' error='This is an error message.'>
             <InputText>https://</InputText>
-            <Input Icon={DownloadIcon} descr='This is a hint text to help user.' error='This is an error message.' />
+            <Input Icon={DownloadIcon} descr='This is a hint text to help user.' error='This is an error message.' placeholder='olivia@unitedui.com' />
           </InputGroup>
         </div>
         <div>
           <InputGroup label='Website' descr='This is a hint text to help user.' error='This is an error message.'>
-            <Input Icon={DownloadIcon} descr='This is a hint text to help user.' error='This is an error message.' />
+            <Input Icon={DownloadIcon} descr='This is a hint text to help user.' error='This is an error message.' placeholder='olivia@unitedui.com' />
+            <Button theme='outline'>
+              <DownloadIcon />
+              Copy
+            </Button>
+          </InputGroup>
+        </div>
+        <div>
+          <InputGroup label='Website' descr='This is a hint text to help user.' error='This is an error message.'>
+            <Input Icon={DownloadIcon} descr='This is a hint text to help user.' error='This is an error message.' placeholder='olivia' />
+            <InputText>@</InputText>
+            <Input Icon={DownloadIcon} descr='This is a hint text to help user.' error='This is an error message.' placeholder='unitedui.com' />
             <Button theme='outline'>
               <DownloadIcon />
               Copy
@@ -188,7 +253,7 @@ function App() {
         <div>
           <InputGroup label='Website' descr='This is a hint text to help user.' error='This is an error message.'>
             <InputText>https://</InputText>
-            <Input Icon={DownloadIcon} descr='This is a hint text to help user.' error='This is an error message.' />
+            <Input Icon={DownloadIcon} descr='This is a hint text to help user.' error='This is an error message.' placeholder='olivia@unitedui.com' />
             <Button theme='outline'>
               <DownloadIcon />
               Copy

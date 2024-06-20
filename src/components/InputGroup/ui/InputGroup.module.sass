@@ -1,30 +1,38 @@
 .inputGroup
-  display: inline-flex
-  flex-direction: column
+  display: block,
+.inputGroup.group
 
-.input
-  display: flex
-  *,
-  * input
+  div:not(:first-child),
+  input:not(:first-child),
+  button:not(:first-child)
     --bs-border-width: 1px
     margin-left: calc(var(--bs-border-width)* -1)
-  *:first-child,
-  *:first-child input
-    border-top-right-radius: 0
-    border-bottom-right-radius: 0
-  *:last-child,
-  *:last-child input
-    border-top-left-radius: 0
-    border-bottom-left-radius: 0
-  // *:not(:last-child):not(:first-child),
-  *:not(:last-child):not(:first-child) input
-    border-radius: 0
+  div,
+  button
+    &:first-child:not(:last-child),
+    *:first-child:not(:last-child) input
+      border-top-right-radius: 0
+      border-bottom-right-radius: 0
+  div,
+  button
+    &:last-child:not(:first-child),
+    *:last-child:not(:first-child) input
+      border-top-left-radius: 0
+      border-bottom-left-radius: 0
+  div,
+  button
+    &:not(:last-child):not(:first-child),
+    *:not(:last-child):not(:first-child) input
+      border-radius: 0
+
+.input
+  margin-top: 6px
+  display: flex
 
   button
     height: 40px
 
 .label
-  margin-bottom: 6px
   font-size: 14px
   line-height: 20px
   font-weight: 500
@@ -41,7 +49,8 @@
   color: #D92D20
 
 .parentError
-  input
+  input,
+  textarea
     border-color: #FDA29B
     &:focus
       border-color: #FDA29B
