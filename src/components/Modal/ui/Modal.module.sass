@@ -59,10 +59,54 @@
 
 .wrapper
   position: absolute
-  top: -140px
-  left: -140px
+  top: -143px
+  left: -143px
   z-index: 0
 
 .body
   position: relative
   z-index: 10
+
+.iconWrapper
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 48px
+  height: 48px
+  border-radius: 9999px
+
+.icon
+  z-index: 100
+
+.none
+  .icon
+    stroke: #344054
+
+.default
+  .iconWrapper
+    border: 1px solid #EAECF0
+    border-radius: var(--radius-lg)
+    background-color: transparent
+  .icon
+    stroke: #344054
+
+.green
+  .iconWrapper
+    background-color: #DCFAE6
+  .icon
+    stroke: #079455
+.red
+  .iconWrapper
+    background-color: #FEE4E2
+  .icon
+    stroke: #D92D20
+.save
+  .iconWrapper
+    background-color: #FEF0C7
+  .icon
+    stroke: #DC6803
+.purple
+  .iconWrapper
+    background-color: #F4EBFF
+  .icon
+    stroke: #7F56D9

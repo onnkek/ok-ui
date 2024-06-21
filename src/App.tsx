@@ -2,7 +2,7 @@ import './App.sass';
 import { Button } from 'components/Button';
 import { ReactComponent as DownloadIcon } from 'assets/icons/download.svg';
 import { ReactComponent as USIcon } from 'assets/icons/US.svg';
-import { ReactComponent as FeaturesIcon } from 'assets/icons/features.svg';
+import { ReactComponent as CheckCircleIcon } from 'assets/icons/check-circle.svg';
 import { ReactComponent as Grid } from 'assets/icons/bg-squares-l.svg';
 import { Input } from 'components/Input';
 import { Dropdown } from 'components/Dropdown';
@@ -37,7 +37,7 @@ function App() {
 
 
       <Button onClick={openModal}>Open modal</Button>
-      <Modal isOpen={open} onClose={closeModal} Icon={FeaturesIcon}>
+      <Modal isOpen={open} onClose={closeModal} Icon={CheckCircleIcon} iconColor='green' bgWrapper='circles'>
         <div style={{ fontSize: '18px', lineHeight: '28px', fontWeight: '600', color: '#101828', marginBottom: '4px' }}>Blog post published</div>
         <div style={{ fontSize: '14px', lineHeight: '20px', fontWeight: '400', color: '#475467' }}>
           This blog post has been published. Team members will be able to edit this post and republish changes.
