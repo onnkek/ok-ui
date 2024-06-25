@@ -1,13 +1,16 @@
 .avatar
+  --avatar-contrast-border: var(--alpha-black-10)
+  --avatar-bg: var(--bg-tertiary)
+  --avatar-fg: var(--fg-quaternary)
   position: relative
   display: flex
   justify-content: center
   align-items: center
-  border: 0.75px solid #00000014
+  border: 0.75px solid var(--avatar-contrast-border)
   border-radius: var(--radius-full)
-  background-color: #F2F4F7
+  background-color: var(--avatar-bg)
   svg
-    stroke: #667085
+    stroke: var(--avatar-fg)
   img
     width: 100%
     height: 100%
@@ -18,15 +21,15 @@
   bottom: -1px
   right: -1px
   border-radius: var(--radius-full)
-  border: 1.5px solid #fff
+  border: 1.5px solid var(--bg-primary)
 .online
-  background-color: #17B26A
+  background-color: var(--fg-success-secondary)
 .offline
-  background-color: #D0D5DD
+  background-color: var(--fg-disabled_subtle)
 .brb
-  background-color: #FEC84B
+  background-color: var(--warning-300)
 .dnd
-  background-color: #F04438
+  background-color: var(--utility-error-500)
 
 .xs
   width: 24px

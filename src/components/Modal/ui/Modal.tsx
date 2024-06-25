@@ -8,6 +8,7 @@ import { ReactComponent as GridBG } from 'assets/icons/bg-grid-s.svg';
 import { ReactComponent as GridDotBG } from 'assets/icons/bg-grid-dot-s.svg';
 import { ReactComponent as SquaresBG } from 'assets/icons/bg-squares-s.svg';
 import { Button } from 'components/Button';
+import { useTheme } from 'helpers/ThemeProvider/lib/useTheme';
 
 type ModalIconColor = 'green' | 'red' | 'save' | 'purple' | 'default' | 'none';
 type ModalBGWrapper = 'circles' | 'grid' | 'grid-dot' | 'squares' | 'none';
@@ -38,7 +39,7 @@ export const Modal = ({ className, children, isOpen, lazy, onClose, Icon, iconCo
   const [isClosing, setIsClosing] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
-
+  const { theme } = useTheme();
   useEffect(() => {
     if (isOpen) {
       setIsMounted(true);
@@ -89,7 +90,7 @@ export const Modal = ({ className, children, isOpen, lazy, onClose, Icon, iconCo
 
   return (
     <Portal>
-      <div className={classNames(cls.modal, mods, [className])}>
+      <div className={classNames(cls.modal, mods, [className, theme])}>
         <div className={cls.overlay} onClick={closeHandler}>
           <div className={cls.content} onClick={onContentClick}>
             <div className={cls.header}>

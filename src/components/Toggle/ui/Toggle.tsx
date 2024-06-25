@@ -13,13 +13,15 @@ export interface ToggleProps {
   disabled?: boolean;
   checked?: boolean;
   size?: ToggleSize;
+  onClick?: () => void;
 }
 
 export const Toggle = ({
   className,
   disabled,
   checked,
-  size = 'M'
+  size = 'M',
+  onClick
 }: ToggleProps) => {
   const [enabled, setEnabled] = useState(checked);
   const mods: Mods = {
@@ -28,6 +30,7 @@ export const Toggle = ({
   }
   return (
     <Switch
+      onClick={onClick}
       disabled={disabled}
       className={classNames(cls.toggleContainer, mods, [className])}
       checked={enabled}

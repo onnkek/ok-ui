@@ -1,3 +1,5 @@
+// @import '../../../variables'
+
 .wrapper.half
   width: calc(var(--progress-radius) * 2 + var(--stroke-width))
   height: calc(var(--progress-radius) + var(--stroke-width))
@@ -8,70 +10,58 @@
   align-items: center
   justify-content: center
   flex-direction: column
+  text-wrap: nowrap
   width: calc(var(--progress-radius )* 2 + var(--stroke-width))
   height: calc(var(--progress-radius )* 2 + var(--stroke-width))
   .progressContainer,
   .progress
     stroke-width: var(--stroke-width)
   .text
-    font-weight: 600
-    color: #101828
+    color: var(--text-primary)
 
-.title
-  margin-bottom: 1px
-  color: #475467
-  font-weight: 500
+  .title
+    margin-bottom: 1px
+    color: var(--text-tertiary)
 
 .wrapper.xxs
   --progress-radius: 32px
   --stroke-width: 6px
   .text
-    font-size: 14px
-    line-height: 20px
+    font: var(--text-sm-semibold)
   .title
     position: absolute
     bottom: -20px
-    font-size: 12px
-    line-height: 18px
-
+    font: var(--text-xs-medium)
 .wrapper.m
   --progress-radius: 80px
   --stroke-width: 16px
   .text
-    font-size: 24px
-    line-height: 32px
+    font: var(--display-xs-semibold)
   .title
-    font-size: 12px
-    line-height: 18px
+    font: var(--text-xs-medium)
 .wrapper.l
   --progress-radius: 100px
   --stroke-width: 20px
   .text
-    font-size: 30px
-    line-height: 38px
+    font: var(--display-sm-semibold)
   .title
-    font-size: 12px
-    line-height: 18px
+    font: var(--text-xs-medium)
 
 .wrapper.xl
   --progress-radius: 120px
   --stroke-width: 24px
   .text
-    font-size: 36px
-    line-height: 44px
+    font: var(--display-md-semibold)
   .title
-    font-size: 14px
-    line-height: 20px
+    font: var(--text-sm-medium)
 
 .wrapper.xxl
   --progress-radius: 140px
   --stroke-width: 28px
   .text
-    font-size: 48px
-    line-height: 60px
+    font: var(--display-lg-semibold)
   .title
-    font-size: 14px
-    line-height: 20px
+    font: var(--text-sm-medium)
 
 .svg
   position: absolute
@@ -79,19 +69,19 @@
   height: inherit
 
 .progressContainer
-  fill: transparent
+  fill: var(--transparent)
   cx: 50%
   cy: 50%
   r: var(--progress-radius)
-  stroke: #EAECF0
+  stroke: var(--bg-quaternary)
 
 .progress
-  fill: transparent
+  fill: var(--transparent)
   --progress-length: calc(2 * 3.1415926535 * var(--progress-radius))
   cx: 50%
   cy: 50%
   r: var(--progress-radius)
-  stroke: #7F56D9
+  stroke: var(--fg-brand-primary)
   transform-origin: center
   transform: rotate(-90deg)
   stroke-dasharray: var(--progress-length)

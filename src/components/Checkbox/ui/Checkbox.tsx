@@ -25,7 +25,8 @@ export const Checkbox = ({
 }: CheckboxProps) => {
   const [enabled, setEnabled] = useState(checked);
   const mods: Mods = {
-    [sizeClasses[size]]: true
+    [sizeClasses[size]]: true,
+    [cls.disabled]: disabled
   }
   return (
     <HCheckbox

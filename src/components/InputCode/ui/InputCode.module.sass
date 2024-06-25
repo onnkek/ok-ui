@@ -1,16 +1,17 @@
+// @import '../../../variables'
+  
 .inputCode
   display: flex
+  justify-content: center
   input
     text-align: center
     font-weight: 500
     &::placeholder
-      color: #D0D5DD
+      color: var(--text-placeholder_subtle)
 .divide
   text-align: center
-  font-size: 60px
-  line-height: 72px
-  font-weight: 500
-  color: #D0D5DD
+  font: var(--display-xl-medium)
+  color: var(--text-placeholder_subtle)
 
 .s
   input
@@ -18,10 +19,9 @@
     padding: 2px 8px
     width: 64px
     height: 64px
-    font-size: 48px
-    line-height: 60px
+    font: var(--display-lg-medium)
   .divide
-    margin: -12px 8px 0px 0px
+    margin: -6px 8px 0px 0px
 
 .m
   input
@@ -29,17 +29,15 @@
     width: 80px
     height: 80px
     margin-right: 12px
-    font-size: 48px
-    line-height: 60px
+    font: var(--display-lg-medium)
   .divide
-    margin: -4px 12px 0px 0px
+    margin: 2px 12px 0px 0px
 .l
   input
     padding: 12px 8px
     width: 96px
     height: 96px
     margin-right: 12px
-    font-size: 60px
-    line-height: 72px
+    font: var(--display-xl-medium)
   .divide
-    margin: 5px 12px 0px 0px
+    margin: 10px 12px 0px 0px

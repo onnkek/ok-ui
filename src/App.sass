@@ -1,38 +1,63 @@
 @import './variables.sass'
 
-.App
-  text-align: center
-
-  &-logo
-    height: 40vmin
-    pointer-events: none
-
-@media (prefers-reduced-motion: no-preference)
-  .App-logo
-    animation: App-logo-spin infinite 20s linear
-
-.App-header
-  background-color: #282c34
-  min-height: 100vh
-  display: flex
-  flex-direction: column
-  align-items: center
-  justify-content: center
-  font-size: calc(10px + 2vmin)
-  color: white
-
-.App-link
-  color: #61dafb
-
-@keyframes App-logo-spin
-  from
-    transform: rotate(0deg)
-
-  to
-    transform: rotate(360deg)
+.app
+  background-color: var(--bg-primary)
 
 .wrapper
-  display: flex
-  justify-content: center
-  padding: 50px
-  background-color: white
+  padding: 50px 100px
+  gap: 40px 20px
+  display: grid
+  justify-items: center
+  align-items: center
+  grid-template-columns: auto auto auto auto auto
+
+.item-1-3
+  grid-column: 1/3
+
+.item-3-6
+  grid-column: 3/6
+
+.item-1-6
+  grid-column: 1/6
+
+.row-3
+  display: grid
+  gap: 10px 20px
+  justify-items: center
+  align-items: center
+  grid-template-columns: auto auto auto
+
+.row-3-ai-start
+  display: grid
+  gap: 10px 20px
+  justify-items: center
+  align-items: flex-start
+  grid-template-columns: auto auto auto
+
+.col-3
+  display: grid
+  gap: 10px 40px
+  justify-items: start
+  align-items: center
+  grid-template-columns: auto auto auto
+
+.col-2
+  display: grid
+  gap: 10px 40px
+  justify-items: start
+  align-items: center
+  grid-template-columns: auto auto
+
+.col-4
+  display: grid
+  gap: 10px 40px
+  justify-items: start
+  align-items: center
+  grid-template-columns: auto auto auto auto
+
+.col-6
+  display: grid
+  gap: 10px 40px
+  justify-items: start
+  align-items: center
+  grid-template-columns: auto auto auto auto auto auto

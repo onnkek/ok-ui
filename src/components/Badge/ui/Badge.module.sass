@@ -1,12 +1,11 @@
+// @import '../../../variables'
+
 .badge
   width: fit-content
   display: flex
   justify-content: center
   align-items: center
-  background-color: #F9FAFB
-  border: 1px solid #EAECF0
-  color: #344054
-  font-weight: 500
+  color: var(--text-secondary)
   border-radius: 20px
 
 .dot
@@ -21,210 +20,207 @@
 .modern
   border-radius: var(--radius-sm)
   background: none
-  border: 1px solid #D0D5DD
-  box-shadow: 0px 1px 2px 0px #1018280D
+  border: 1px solid var(--border-primary)
+  box-shadow: var(--shadow-xs)
 
 .gray.primary,
 .gray.rect
-  background-color: #F9FAFB
-  border: 1px solid #EAECF0
-  color: #344054
+  background-color: var(--utility-gray-50)
+  border: 1px solid var(--utility-gray-200)
+  color: var(--utility-gray-700)
   .dot
-    background-color: #475467
+    background-color: var(--utility-gray-600)
 .gray.outline
-  border: 1.5px solid #475467
-  color: #344054
+  border: 1.5px solid var(--utility-gray-600)
+  color: var(--utility-gray-700)
   .dot
-    background-color: #475467
+    background-color: var(--utility-gray-600)
 .gray.modern
   .dot
-    background-color: #667085
+    background-color: var(--utility-gray-500)
 
 .brand.primary,
 .brand.rect
-  border: 1px solid #E9D7FE
-  background-color: #F9F5FF
-  color: #6941C6
+  border: 1px solid var(--utility-brand-200)
+  background-color: var(--utility-brand-50)
+  color: var(--utility-brand-700)
   .dot
-    background-color: #9E77ED
+    background-color: var(--utility-brand-500)
 .brand.outline
-  border: 1.5px solid #7F56D9
-  color: #6941C6
+  border: 1.5px solid var(--utility-brand-600)
+  color: var(--utility-brand-700)
   .dot
-    background-color: #7F56D9
+    background-color: var(--utility-brand-600)
 .brand.modern
   .dot
-    background-color: #9E77ED
+    background-color: var(--utility-brand-500)
 
 .error.primary,
 .error.rect
-  border: 1px solid #FECDCA
-  background-color: #FEF3F2
-  color: #B42318
+  border: 1px solid var(--utility-error-200)
+  background-color: var(--utility-error-50)
+  color: var(--utility-error-700)
   .dot
-    background-color: #F04438
+    background-color: var(--utility-error-500)
 .error.outline
-  border: 1.5px solid #D92D20
-  color: #B42318
+  border: 1.5px solid var(--utility-error-600)
+  color: var(--utility-error-700)
   .dot
-    background-color: #D92D20
+    background-color: var(--utility-error-600)
 .error.modern
   .dot
-    background-color: #F04438
+    background-color: var(--utility-error-500)
 
 .warning.primary,
 .warning.rect
-  border: 1px solid #FEDF89
-  background-color: #FFFAEB
-  color: #B54708
+  border: 1px solid var(--utility-warning-200)
+  background-color: var(--utility-warning-50)
+  color: var(--utility-warning-700)
   .dot
-    background-color: #F79009
+    background-color: var(--utility-warning-500)
 .warning.outline
-  border: 1.5px solid #DC6803
-  color: #B54708
+  border: 1.5px solid var(--utility-warning-600)
+  color: var(--utility-warning-700)
   .dot
-    background-color: #DC6803
+    background-color: var(--utility-warning-600)
 .warning.modern
   .dot
-    background-color: #F79009
+    background-color: var(--utility-warning-500)
 
 .success.primary,
 .success.rect
-  border: 1px solid #ABEFC6
-  background-color: #ECFDF3
-  color: #067647
+  border: 1px solid var(--utility-success-200)
+  background-color: var(--utility-success-50)
+  color: var(--utility-success-700)
   .dot
-    background-color: #17B26A
+    background-color: var(--utility-success-500)
 .success.outline
-  border: 1.5px solid #079455
-  color: #067647
+  border: 1.5px solid var(--utility-success-600)
+  color: var(--utility-success-700)
   .dot
-    background-color: #079455
+    background-color: var(--utility-success-600)
 .success.modern
   .dot
-    background-color: #17B26A
+    background-color: var(--utility-success-500)
 
 .grayBlue.primary,
 .grayBlue.rect
-  border: 1px solid #D5D9EB
-  background-color: #F8F9FC
-  color: #363F72
+  border: 1px solid var(--utility-gray-blue-200)
+  background-color: var(--utility-gray-blue-50)
+  color: var(--utility-gray-blue-700)
   .dot
-    background-color: #4E5BA6
+    background-color: var(--utility-gray-blue-500)
 .grayBlue.outline
-  border: 1.5px solid #3E4784
-  color: #363F72
+  border: 1.5px solid var(--utility-gray-blue-600)
+  color: var(--utility-gray-blue-700)
   .dot
-    background-color: #4E5BA6
+    background-color: var(--utility-gray-blue-500)
 .grayBlue.modern
   .dot
-    background-color: #4E5BA6
+    background-color: var(--utility-gray-blue-500)
 
 .blueLight.primary,
 .blueLight.rect
-  border: 1px solid #B9E6FE
-  background-color: #F0F9FF
-  color: #026AA2
+  border: 1px solid var(--utility-blue-light-200)
+  background-color: var(--utility-blue-light-50)
+  color: var(--utility-blue-light-700)
   .dot
-    background-color: #0BA5EC
+    background-color: var(--utility-blue-light-500)
 .blueLight.outline
-  border: 1.5px solid #0086C9
-  color: #026AA2
+  border: 1.5px solid var(--utility-blue-light-600)
+  color: var(--utility-blue-light-700)
   .dot
-    background-color: #0BA5EC
+    background-color: var(--utility-blue-light-500)
 .blueLight.modern
   .dot
-    background-color: #0BA5EC
+    background-color: var(--utility-blue-light-500)
 
 .blue.primary,
 .blue.rect
-  border: 1px solid #B2DDFF
-  background-color: #EFF8FF
-  color: #175CD3
+  border: 1px solid var(--utility-blue-200)
+  background-color: var(--utility-blue-50)
+  color: var(--utility-blue-700)
   .dot
-    background-color: #2E90FA
+    background-color: var(--utility-blue-500)
 .blue.outline
-  border: 1.5px solid #1570EF
-  color: #175CD3
+  border: 1.5px solid var(--utility-blue-600)
+  color: var(--utility-blue-700)
   .dot
-    background-color: #2E90FA
+    background-color: var(--utility-blue-500)
 .blue.modern
   .dot
-    background-color: #2E90FA
+    background-color: var(--utility-blue-500)
 
 .indigo.primary,
 .indigo.rect
-  border: 1px solid #C7D7FE
-  background-color: #EEF4FF
-  color: #3538CD
+  border: 1px solid var(--utility-indigo-200)
+  background-color: var(--utility-indigo-50)
+  color: var(--utility-indigo-700)
   .dot
-    background-color: #6172F3
+    background-color: var(--utility-indigo-500)
 .indigo.outline
-  border: 1.5px solid #444CE7
-  color: #3538CD
+  border: 1.5px solid var(--utility-indigo-600)
+  color: var(--utility-indigo-700)
   .dot
-    background-color: #6172F3
+    background-color: var(--utility-indigo-500)
 .indigo.modern
   .dot
-    background-color: #6172F3
+    background-color: var(--utility-indigo-500)
 
 .purple.primary,
 .purple.rect
-  border: 1px solid #D9D6FE
-  background-color: #F4F3FF
-  color: #5925DC
+  border: 1px solid var(--utility-purple-200)
+  background-color: var(--utility-purple-50)
+  color: var(--utility-purple-700)
   .dot
-    background-color: #7A5AF8
+    background-color: var(--utility-purple-500)
 .purple.outline
-  border: 1.5px solid #6938EF
-  color: #5925DC
+  border: 1.5px solid var(--utility-purple-600)
+  color: var(--utility-purple-700)
   .dot
-    background-color: #7A5AF8
+    background-color: var(--utility-purple-500)
 .purple.modern
   .dot
-    background-color: #7A5AF8
+    background-color: var(--utility-purple-500)
 
 .pink.primary,
 .pink.rect
-  border: 1px solid #FCCEEE
-  background-color: #FDF2FA
-  color: #C11574
+  border: 1px solid var(--utility-pink-200)
+  background-color: var(--utility-pink-50)
+  color: var(--utility-pink-700)
   .dot
-    background-color: #EE46BC
+    background-color: var(--utility-pink-500)
 .pink.outline
-  border: 1.5px solid #DD2590
-  color: #C11574
+  border: 1.5px solid var(--utility-pink-600)
+  color: var(--utility-pink-700)
   .dot
-    background-color: #EE46BC
+    background-color: var(--utility-pink-500)
 .pink.modern
   .dot
-    background-color: #EE46BC
+    background-color: var(--utility-pink-500)
 
 .orange.primary,
 .orange.rect
-  border: 1px solid #F9DBAF
-  background-color: #FEF6EE
-  color: #B93815
+  border: 1px solid var(--utility-orange-200)
+  background-color: var(--utility-orange-50)
+  color: var(--utility-orange-700)
   .dot
-    background-color: #EF6820
+    background-color: var(--utility-orange-500)
 .orange.outline
-  border: 1.5px solid #E04F16
-  color: #B93815
+  border: 1.5px solid var(--utility-orange-600)
+  color: var(--utility-orange-700)
   .dot
-    background-color: #EF6820
+    background-color: var(--utility-orange-500)
 .orange.modern
   .dot
-    background-color: #EF6820
+    background-color: var(--utility-orange-500)
 
 .s
   padding: 1.2px 8px
-  font-size: 12px
-  line-height: 18px
+  font: var(--text-xs-medium)
 .m
   padding: 1.2px 10px
-  font-size: 14px
-  line-height: 20px
+  font: var(--text-sm-medium)
 .l
   padding: 3.2px 12px
-  font-size: 14px
-  line-height: 20px
+  font: var(--text-sm-medium)
