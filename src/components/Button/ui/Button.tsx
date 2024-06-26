@@ -25,7 +25,7 @@ export interface ButtonProps {
   disabled?: boolean;
   size?: ButtonSize;
   theme?: ButtonTheme;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   width?: string;
 }
 

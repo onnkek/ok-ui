@@ -21,6 +21,7 @@ import { useTheme } from 'helpers/ThemeProvider/lib/useTheme';
 import { classNames } from 'helpers/classNames';
 import { Checkbox } from 'components/Checkbox';
 import { Modal } from 'components/Modal';
+import { Pagination } from 'components/Pagination';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -40,7 +41,9 @@ function App() {
 
 
       <div className='wrapper'>
+
         <Button onClick={openModal}>Open modal</Button>
+
         <Modal isOpen={open} onClose={closeModal} Icon={CheckCircleIcon} iconColor='green' bgWrapper='circles'>
           <div style={{ fontSize: '18px', lineHeight: '28px', fontWeight: '600', color: 'var(--text-primary)', marginBottom: '4px' }}>Blog post published</div>
           <div style={{ fontSize: '14px', lineHeight: '20px', fontWeight: '400', color: 'var(--text-secondary)' }}>
@@ -51,6 +54,47 @@ function App() {
             <Button width='170px' size='L'>Confirm</Button>
           </div>
         </Modal>
+
+        <div />
+        <div />
+        <div />
+        <div />
+        <div className='item-1-6'>
+          <div style={{ width: '800px' }}>
+            <Pagination />
+          </div>
+        </div>
+        <div className='item-1-6'>
+          <div style={{ width: '800px' }}>
+            <Pagination theme='default-circle' />
+          </div>
+        </div>
+        <div className='item-1-6'>
+          <div style={{ width: '800px' }}>
+            <Pagination theme='minimal' />
+          </div>
+        </div>
+        <div className='item-1-6'>
+          <div style={{ width: '800px' }}>
+            <Pagination theme='minimal-circle' />
+          </div>
+        </div>
+        <div className='item-1-6'>
+          <div style={{ width: '800px' }}>
+            <Pagination theme='button-group' />
+          </div>
+        </div>
+        <div className='item-1-6'>
+          <div style={{ width: '600px' }}>
+            <Pagination theme='text' />
+          </div>
+        </div>
+        <div className='item-1-6'>
+          <div style={{ width: '400px' }}>
+            <Pagination theme='text-arrow' />
+          </div>
+        </div>
+
         <div className='item-1-6'>
           <div className='col-3'>
             <div style={{ display: 'flex', gap: '10px' }}>
