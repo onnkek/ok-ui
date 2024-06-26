@@ -22,6 +22,7 @@ import { classNames } from 'helpers/classNames';
 import { Checkbox } from 'components/Checkbox';
 import { Modal } from 'components/Modal';
 import { Pagination } from 'components/Pagination';
+import { Breadcrumbs } from 'components/Breadcrumbs';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -59,6 +60,32 @@ function App() {
         <div />
         <div />
         <div />
+
+
+        <div className='item-1-6'>
+          <div style={{ width: '800px' }}>
+            <Breadcrumbs
+              items={[
+                { content: 'Settings' },
+                { content: 'Profile' },
+                { content: '...' },
+                { content: 'Team' },
+              ]}
+              dividerTheme='slash' />
+          </div>
+        </div>
+        <div className='item-1-6'>
+          <div style={{ width: '800px' }}>
+            <Breadcrumbs items={[
+              { content: 'Settings' },
+              { content: 'Profile' },
+              { content: '...' },
+              { content: 'Team' },
+            ]} />
+          </div>
+        </div>
+
+
         <div className='item-1-6'>
           <div style={{ width: '800px' }}>
             <Pagination />
