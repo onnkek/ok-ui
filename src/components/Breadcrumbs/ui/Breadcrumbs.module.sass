@@ -1,17 +1,43 @@
 .breadcrumbs
   display: flex
   align-items: center
-  color: var(--text-tertiary)
   font: var(--text-sm-medium)
-  div:last-child
+  a
+    padding: 4px 8px
+    text-decoration: none
+    color: var(--text-tertiary)
+  a:last-child
     color: var(--text-brand-secondary)
     font: var(--text-sm-semibold)
+
+.clearColor
+  a
+    &:hover
+      border-radius: var(--radius-sm)
+      background-color: var(--utility-brand-50)
+
+.clear
+  a:last-child
+    color: var(--text-secondary)
+  a
+    &:hover
+      border-radius: var(--radius-sm)
+      background-color: var(--bg-primary_hover)
+
+.breadcrumbs.line
+  padding: 0px 8px
+  border-top: 1px solid var(--border-secondary)
+  border-bottom: 1px solid var(--border-secondary)
 
 .home
   width: 20px
   height: 20px
   stroke: var(--fg-quaternary)
-  margin-right: 12px
+
+.homeContainer
+  display: flex
+  justify-content: center
+  align-items: center
 
 .divider
   width: 16px
@@ -22,4 +48,4 @@
   height: 20px
 
 .item
-  margin: 0px 12px
+  // margin: 0px 12px

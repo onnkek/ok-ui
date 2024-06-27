@@ -23,6 +23,7 @@ import { Checkbox } from 'components/Checkbox';
 import { Modal } from 'components/Modal';
 import { Pagination } from 'components/Pagination';
 import { Breadcrumbs } from 'components/Breadcrumbs';
+import { Table } from 'components/Table';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -33,7 +34,54 @@ function App() {
   const closeModal = () => {
     setOpen(false);
   }
-
+  const breadcrumbsItems = [
+    { content: 'Settings', link: '#' },
+    { content: 'Profile', link: '#' },
+    { content: '...', link: '#' },
+    { content: 'Team', link: '#' },
+  ];
+  const testRows = [
+    {
+      cells: [
+        { content: "1" },
+        { content: "Anna" },
+        { content: "1997" },
+        { content: "$100" }
+      ]
+    },
+    {
+      cells: [
+        { content: "2" },
+        { content: "Karl" },
+        { content: "1975" },
+        { content: "$1700" }
+      ]
+    },
+    {
+      cells: [
+        { content: "3" },
+        { content: "Ivan" },
+        { content: "1925" },
+        { content: "$200" }
+      ]
+    },
+    {
+      cells: [
+        { content: "4" },
+        { content: "Alex" },
+        { content: "1978" },
+        { content: "$3500" }
+      ]
+    },
+    {
+      cells: [
+        { content: "5" },
+        { content: "Mara" },
+        { content: "1945" },
+        { content: "$8300" }
+      ]
+    }
+  ];
   return (
     <div className={classNames('app', {}, [theme])}>
       <div style={{ display: 'flex', position: 'fixed', zIndex: '99999999999' }}>
@@ -63,28 +111,60 @@ function App() {
 
 
         <div className='item-1-6'>
+          <Table rows={testRows} />
+        </div>
+        <div className='item-1-6'>
+          <Table rows={testRows} theme='interlaced-fill' />
+        </div>
+        <div className='item-1-6'>
           <div style={{ width: '800px' }}>
-            <Breadcrumbs
-              items={[
-                { content: 'Settings' },
-                { content: 'Profile' },
-                { content: '...' },
-                { content: 'Team' },
-              ]}
-              dividerTheme='slash' />
+            <Breadcrumbs items={breadcrumbsItems} />
           </div>
         </div>
         <div className='item-1-6'>
           <div style={{ width: '800px' }}>
-            <Breadcrumbs items={[
-              { content: 'Settings' },
-              { content: 'Profile' },
-              { content: '...' },
-              { content: 'Team' },
-            ]} />
+            <Breadcrumbs
+              items={breadcrumbsItems}
+              dividerTheme='slash'
+            />
           </div>
         </div>
-
+        <div className='item-1-6'>
+          <div style={{ width: '800px' }}>
+            <Breadcrumbs
+              theme='line'
+              items={breadcrumbsItems}
+            />
+          </div>
+        </div>
+        <div className='item-1-6'>
+          <div style={{ width: '800px' }}>
+            <Breadcrumbs
+              theme='line'
+              items={breadcrumbsItems}
+              dividerTheme='slash'
+            />
+          </div>
+        </div>
+        <div className='item-1-6'>
+          <div style={{ width: '800px' }}>
+            <Breadcrumbs
+              activeTheme='clear-color'
+              theme='primary'
+              items={breadcrumbsItems}
+            />
+          </div>
+        </div>
+        <div className='item-1-6'>
+          <div style={{ width: '800px' }}>
+            <Breadcrumbs
+              activeTheme='clear'
+              theme='primary'
+              items={breadcrumbsItems}
+              dividerTheme='slash'
+            />
+          </div>
+        </div>
 
         <div className='item-1-6'>
           <div style={{ width: '800px' }}>
