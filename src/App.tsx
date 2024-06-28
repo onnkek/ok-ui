@@ -24,6 +24,9 @@ import { Modal } from 'components/Modal';
 import { Pagination } from 'components/Pagination';
 import { Breadcrumbs } from 'components/Breadcrumbs';
 import { Table } from 'components/Table';
+import { InputFile } from 'components/InputFile';
+import { ProgressFile } from 'components/ProgressFile';
+import { ReactComponent as PDFIcon } from 'assets/icons/PDF.svg';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -108,8 +111,36 @@ function App() {
         <div />
         <div />
         <div />
-
-
+        <div className='item-1-6' style={{ width: '600px' }}>
+          <ProgressFile
+            FileIcon={PDFIcon}
+            fileName='Tech design requirements.pdf'
+            fileSize='200 KB'
+            value='10'
+          />
+        </div>
+        <div className='item-1-6' style={{ width: '600px' }}>
+          <ProgressFile
+            FileIcon={PDFIcon}
+            fileName='Tech design requirements.pdf'
+            fileSize='200 KB'
+            status='fulfilled'
+          />
+        </div>
+        <div className='item-1-6' style={{ width: '600px' }}>
+          <ProgressFile
+            FileIcon={PDFIcon}
+            fileName='Tech design requirements.pdf'
+            fileSize='200 KB'
+            status='rejected'
+          />
+        </div>
+        <div className='item-1-6' style={{ width: '600px' }}>
+          <InputFile />
+        </div>
+        <div className='item-1-6' style={{ width: '600px' }}>
+          <InputFile disabled />
+        </div>
         <div className='item-1-6'>
           <Table rows={testRows} />
         </div>
